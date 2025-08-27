@@ -194,6 +194,8 @@ const getDeliveredNotifications = async () => {
 * [`addListener('pushNotificationReceived', ...)`](#addlistenerpushnotificationreceived-)
 * [`addListener('pushNotificationActionPerformed', ...)`](#addlistenerpushnotificationactionperformed-)
 * [`removeAllListeners()`](#removealllisteners)
+* [`setActiveChatId(...)`](#setactivechatid)
+* [`clearActiveChatId()`](#clearactivechatid)
 * [Interfaces](#interfaces)
 * [Type Aliases](#type-aliases)
 
@@ -469,6 +471,32 @@ removeAllListeners() => Promise<void>
 Remove all native listeners for this plugin.
 
 **Since:** 1.0.0
+
+--------------------
+
+
+### setActiveChatId(...)
+
+```typescript
+setActiveChatId(opts: { activeChatId: string; chatType: string; }) => Promise<void>
+```
+
+Set the active chat identifier
+
+| Param      | Type                                                     |
+| ---------- | -------------------------------------------------------- |
+| **`opts`** | <code>{ activeChatId: string; chatType: string; }</code> |
+
+--------------------
+
+
+### clearActiveChatId()
+
+```typescript
+clearActiveChatId() => Promise<void>
+```
+
+Clear the active chat identifier
 
 --------------------
 
