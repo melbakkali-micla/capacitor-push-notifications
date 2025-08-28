@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DEFAULT_CHANNEL">BAAC</string>
+    <string name="fullscreen_notification_class_name">FullScreenNotificationActivity</string>
+    <string name="main_activity_class_name">MainActivity</string>
+    <string name="PACKAGE_ID">io.baac.tunisie.miclapp</string>
+</resources>

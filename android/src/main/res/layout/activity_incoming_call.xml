@@ -1,0 +1,128 @@
+<!-- res/layout/activity_incoming_call.xml -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#1A202C"
+  tools:context=".IncomingCallActivity">
+
+  <!-- "Incoming Call" Label -->
+  <TextView
+    android:id="@+id/callType"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="128dp"
+    android:text="Incoming Call"
+    android:textColor="#A0AEC0"
+    android:textSize="20sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <!-- Circular Avatar for the Caller using MaterialCardView -->
+  <com.google.android.material.card.MaterialCardView
+    android:id="@+id/callerAvatarContainer"
+    android:layout_width="120dp"
+    android:layout_height="120dp"
+    android:layout_marginTop="32dp"
+    app:cardCornerRadius="60dp"
+    app:cardElevation="0dp"
+    app:strokeColor="#4A5568"
+    app:strokeWidth="2dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/callType">
+
+    <ImageView
+      android:id="@+id/callerAvatar"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:src="@drawable/ic_avatar_placeholder"
+      android:scaleType="centerCrop"
+      android:contentDescription="Caller Avatar" />
+
+  </com.google.android.material.card.MaterialCardView>
+
+  <!-- Caller's Name -->
+  <TextView
+    android:id="@+id/callerName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:textColor="@android:color/white"
+    android:textSize="34sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/callerAvatarContainer"
+    tools:text="Caller Name" />
+
+  <!-- Action Buttons Container -->
+  <LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginBottom="88dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <!-- Decline Button -->
+<!--    <LinearLayout-->
+<!--      android:layout_width="wrap_content"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:orientation="vertical"-->
+<!--      android:gravity="center_horizontal"-->
+<!--      android:layout_marginEnd="40dp">-->
+
+<!--      <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/declineButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:backgroundTint="#E53E3E"-->
+<!--        android:src="@drawable/ic_call_end"-->
+<!--        app:tint="@android:color/white"-->
+<!--        app:borderWidth="0dp"-->
+<!--        app:elevation="6dp"-->
+<!--        android:contentDescription="Decline Call" />-->
+
+<!--      <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Decline"-->
+<!--        android:textColor="#A0AEC0"-->
+<!--        android:layout_marginTop="8dp"/>-->
+<!--    </LinearLayout>-->
+
+    <!-- Accept Button -->
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:gravity="center_horizontal">
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/acceptButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#48BB78"
+        android:src="@drawable/ic_call_accept"
+        app:tint="@android:color/white"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        android:contentDescription="Accept Call" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accept"
+        android:textColor="#A0AEC0"
+        android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+  </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
